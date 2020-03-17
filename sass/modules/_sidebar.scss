@@ -1,0 +1,111 @@
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  z-index: 5;
+  background: #414141;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar hr {
+  border-top: 1px solid #ccc;
+}
+
+#side-toggle.active {
+  margin-left: 250px;
+
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  margin-top: 30%;
+}
+
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #353535;
+  background: #d80000;
+  text-decoration: none;
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background-color: #353535;
+}
+
+.btn-info {
+  margin-left: 110% ;
+  color: black;
+  background-color: none !important;
+  border-color: none !important;
+  cursor: pointer;
+  background: transparent !important;
+  
+}
+
+
+#sidebar button {
+  margin-left: 20%;
+  margin-top: 60% !important;
+  background-color: white !important;
+  color: #2a2a2a !important;
+}
+
+
+#side-toggle {
+  margin-top: -50% ;
+  filter: drop-shadow(2px 2px 5px #424242);
+  -webkit-filter: drop-shadow(2px 2px 5px #424242);
+  -moz-filter: drop-shadow(2px 2px 5px #424242); 
+}
+
+.mod {
+    margin-top: 0% ;
+    background-color: none !important;
+    border-color: none !important;
+}
+
+//making the main content responsive
+#content {
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+#content.active {
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
