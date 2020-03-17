@@ -1,40 +1,51 @@
-import Home from "./components/Home.js";
+import home from "./components/home.js";
+//import section2 from "./components/section2.js";
+import adminlogin from "./components/adminlogin.js";
+import adminCMS from "./components/adminCMS.js";
+import ErrorPage from "./components/ErrorPage.js";
 
 
-// todo => use a key to track the current video, or just pass the video in as a ref to the function and grab its source
-Vue.component('', {
-  props: [''], //container where we can dump infos 
-  template: `
-    <div>  
-        <h3 class="movie-title">{{ movie.videotitle }}</h3>
-        <video :src="'video/' + movie.vidsource" controls autoplay></video>
-        <div class="movie-details">
-            <p>{{ movie.videodescription }}</p> 
-        </div>
-    </div>
-  `
-})
+
 
 const router = new VueRouter({
   routes: [
     { path: "/", 
     name: "home", 
-    component: Home }
+    component: home },
+
+    { path: "/adminlogin", 
+    name: "adminlogin", 
+    component: adminlogin },
+
+    { path: '/admin', 
+    name: "admin", 
+    component: adminCMS }, 
+
+    { path: '*', 
+    name: "error", 
+    component: ErrorPage }//* catches anything that doesnt match MAKE THIS THE VERY LAST TO AVOID PROBLEMS
+
   ]
 }) 
+
+
 
 
 var vm = new Vue({
   el: "#app", 
 
   data: {
-
     
+    
+},
+
+created: function() {
+  console.log('yo is workin');
 },
 
 
   methods: { //functionality that you can run in vue
-   
+    
   },
 
   router

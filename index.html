@@ -16,76 +16,31 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script> <!-- Loading this first -->
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+  
 
   <title>Open Up Awareness</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-            <img src="./images/logo-final.png" alt="Logo" width="60">
-        </a>
-        <!-- Burger Toggle -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <!-- Nav Links -->
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item ml-3" id="li-home">
-              <a class="nav-link active" href="/">HOME</a>
-            </li>
-            <li class="nav-item active ml-3">
-              <a class="nav-link" href="#section2">ABOUT</a>
-            </li>
-            <li class="nav-item active ml-3">
-                <a class="nav-link" href="#">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<body data-spy='scroll' data-target='.navbar' data-offset='50'>
+  
 
 <!-- Main Content -->
 <main id="app">
-  <router-view></router-view> <!-- Inside will be admin vs reg-user interface (Admin login)-->
-  
-  <div class="containter" id="section2">
-    <div class="row">
-      <div class="col">
-
-      </div>
-    </div>
-  </div>
-
+  <router-view></router-view>
 </main>
 <!-- End of Main Content -->
 
 
 
-            <!-- <section class="hidden-movies" :class="{ 'show-movie' : showMovieDetails }"> hidden movies-->
-            <!-- <h3 class="movie-title">{{ videotitle }}</h3> see main js
-            <video :src="'video/' + vidsource" controls autoplay></video>
-            <div class="movie-details">
-                <p>{{ videodescription }}</p>
-            </div> LOOK AT TEMPLATE IN MAIN.JS-->
-        <!-- 
-            <player v-bind:movie="movie" /> 
-            </section>  -->
+  <script defer src="js/main.js" type="module"></script>
+  <script defer src="js/typing.js" type="module"></script> 
+  <script defer src="js/nav_scroll.js" type="module"></script>
+  <script defer src="js/sidebar.js" type="module"></script> 
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-
-  <footer>
-    <p>All content &copy; 2020 Open Up</p>
-  </footer>
-
-  <script defer src="js/main.js" type="module"></script> <!-- defer will load the frist script first to avoid undefines -->
-  <script defer src="js/active_state.js" type="module"></script> <!-- defer will load the frist script first to avoid undefines -->
 
 </body>
 
