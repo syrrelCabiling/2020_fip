@@ -6,7 +6,7 @@ export default {
     template: `  
     <section class="container-fluid" id="section2">
     <div class="row mx-auto text-center">
-    <h1>TEST AYEnnnnn</h1>
+    <h1>TEST AYEnnnnnffffff</h1>
     <img src="./images/peach.svg" alt="splash" class="sec2-svg col-lg-6 text-center">
         <div class="col-lg-6 col-sm-12 mt-0">
             <h1 class="mb-4">So It's Your First Time?</h1>
